@@ -118,6 +118,22 @@
       "nombre": "Martha",
       "apellido": "Rey",
       "programa_id": "2"
+    },
+    {
+      "id": "4",
+      "tipo_documento": "Cedula de Ciudadania",
+      "numero_documento": "12312321314",
+      "nombre": "Andres Felipe",
+      "apellido": "Buitrago",
+      "departamento_id": 1
+    },
+    {
+      "id": "5",
+      "tipo_documento": "Cedula de Ciudadania",
+      "numero_documento": "132214355123",
+      "nombre": "pedro ",
+      "apellido": "Avellaneda",
+      "departamento_id": 2
     }
   ],
   "alumnos": [
@@ -285,6 +301,14 @@
       "asignatura_id": 2,
       "periodo_id": 1,
       "precio": 3300
+    },
+    {
+      "id": 3,
+      "estudianteN": "Carlos Rodríguez",
+      "estudiante_id": "1",
+      "asignaturas_id": [],
+      "periodo": "P24-02",
+      "precio": 0
     }
   ]
 }

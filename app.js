@@ -1,10 +1,15 @@
 document.addEventListener('DOMContentLoaded', async () => {
     await handleNavigation();
     await cargarListasExistentes();
+    //CARGAR DE ARCHIVOS DE ESTUDIANTES:
+    await mostrarListaEst();
     cargarFormularioEstudiantes();
+    //CARGA DE FUNCIONES DE ASGINATURAS 
     await mostrarListaAsignaturas();
-    cargarFormularioAsignaturas()
-
+    cargarFormularioAsignaturas();
+    //CARGA DE FUNCIONES DE DOCENTES 
+    await mostrarListaDocts();
+    cargarFormularioDocentes();
 
 
     const links = document.querySelectorAll('.navigation a');

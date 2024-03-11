@@ -7,6 +7,7 @@
   --color-submenu-navbar: #222222;
   --color-submenu-responsive-navbar: #282828;
 
+  --color-boxes-form:rgba( 126, 211, 33, 0.3 );
 
 }
 
@@ -181,7 +182,7 @@ section {
   margin-top: 110px;
   width: 91vw;
   height: fit-content;
-  min-height: 154vh;
+  min-height: 140vh;
   margin: 50px;
   margin-top: 100px;
 }
@@ -315,23 +316,7 @@ h2 {
   padding-left: 5em;
   padding-right: 10em;
 }
-
-/* ASIGNATURAS STYLES DE CAJAS */
-#Asignaturas-form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 120vh;
-  background: rgba( 126, 211, 33, 0.3 );
-  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-  backdrop-filter: blur( 2px );
-  border-radius: 44px;
-  border: 1px solid rgba( 255, 255, 255, 0.18 );
-  width: 53%;
-  margin: auto;
-  padding: 10px ;
-}
-
+/* ESTILOS DE LOS BOTONES DE INPUT Y LABEL DE FORMULARIOS */
 form input {
   width: 100%;
   padding: 10px;
@@ -358,11 +343,114 @@ form button {
   width: 80%; 
   margin: auto;
 }
+/* ESTUDIANTES ESTILOS DE CAJAS  */
+
+#Estudiantes-form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 160vh;
+  background: var(--color-boxes-form);
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 2px );
+  border-radius: 44px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  width: 47%;
+  margin: auto;
+  padding: 30px;
+
+}
+#lista-Estudiantes{
+  display: flex;
+  justify-content: center;
+  height: 160vh;
+  background: var(--color-boxes-form);
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 2px );
+  border-radius: 44px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  width: 47%;
+  margin: auto;
+  padding: 30px;
+}
+input#search-input-EST{
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 36px;
+} 
+a#boton-crear-docente {
+  padding: 0.5em;
+  background-color: var(--color-navbar);
+  color: var(--color-text-navbar);
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--color-hover-navbar);
+}
+section#Estudiantes {
+  min-height: 182vh;
+}
+/* DOCENTES ESTILOS DE CAJAS  */
+#Docentes-form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  background: var(--color-boxes-form);
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 2px );
+  border-radius: 44px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  width: 40%;
+  margin: auto;
+  padding: 10px;
+}
+#lista-Docentes{
+  display: flex;
+  justify-content: center;
+  height: 90vh;
+  background: var(--color-boxes-form);
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 2px );
+  border-radius: 44px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  width: 40%;
+  margin: auto;
+  margin-left: 50px;
+  padding: 30px;
+}
+section#Docentes {
+  min-height: 107vh;
+}
+input#search-input-docnts {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 36px;
+}
+/* ASIGNATURAS STYLES DE CAJAS */
+#Asignaturas-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120vh;
+  background: var(--color-boxes-form);
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 2px );
+  border-radius: 44px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  width: 53%;
+  margin: auto;
+  padding: 10px ;
+}
 
 #listado-Asignaturas {
   display: flex;
   height: 120vh;
-  background: rgba( 126, 211, 33, 0.3 );
+  background: var(--color-boxes-form);
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
   backdrop-filter: blur( 2px );
   border-radius: 44px;
@@ -377,4 +465,26 @@ input#search-input-Asignaturas{
   padding: 10px;
   margin-bottom: 10px;
   border-radius: 36px;
+}
+
+/* Media query solo para Estudiantes */
+
+@media screen and (max-width: 768px) {
+  #Estudiantes-form,
+  #lista-Estudiantes {
+    height: 185vh;
+    margin-right: 40px ;
+    margin-bottom: 50px;
+    width: 100%; 
+  }
+}
+/* Media query solo para Asignaturas */
+@media screen and (max-width: 768px) {
+  #Asignaturas-form,
+  #listado-Asignaturas {
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+    margin: 20px auto;
+  }
 }

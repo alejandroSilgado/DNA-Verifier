@@ -23,38 +23,48 @@ const cargarEstudiantes= async()=>{
 const cargarFormularioEstudiantes=()=>{
     const EstudiantesForm = document.getElementById('Estudiantes-form');
     EstudiantesForm.innerHTML = `
-      <form>
-          <label for="nombreEstudiante">Nombre del Estudiante:</label>
-          <input type="text" id="nombreEstudiante" required>
-          <label for="apellidoEstudiante">Apellido del Estudiante:</label>
-          <input type="text" id="apellidoEstudiante" required>
-          <label for="sexoest">Sexo:</label>
-            <select id="sexoest" required>
-                ${cargarsexos()}
-            </select> 
-          <label for="nacimientoest">Fecha de Nacimiento:</label>
-          <input type="text" id="nacimientoest" required>
-          <label for="search-input-docs">Tipo de Documento:</label>
-            <select id="tipodocumentoest" required>
-                ${cargartiposdocs()}
-            </select> 
-          <label for="numdocumentoest">Numero de documento:</label>
-          <input type="number" id="numdocumentoest" required> 
-          <label for="ciudadestudiante">Ciudad de Residencia</label>
-          <input type="text" id="ciudadestudiante" required>
-          <label for="direccionest">Direccion:</label>
-          <input type="text" id="direccionest" required>
-          <label for="telefonoest">Telefono:</label>
-          <input type="number" id="telefonoest" required>
-          <label for="programaest">Programa:</label>
-          <div class="search-container.prog">
-            <input type="text" id="search-input-docs" placeholder="Buscar Programas...">
-            <ul id="search-results-docs"></ul>
-          </div>
-          <button type="button" onclick="crearEstudiante()">Crear Estudiante</button>
-          <!-- Aquí se puede añadir más funcionalidad, como modificar y eliminar clientes -->
-      </form>
-  `;
+    <form onsubmit="crearEstudiante(event)">
+    <h2>Crear Estudiantes</h2>
+    <label for="nombreEstudiante">Nombre del Estudiante:</label>
+    <input type="text" id="nombreEstudiante" placeholder="Ingrese el nombre del estudiante" required>
+
+    <label for="apellidoEstudiante">Apellido del Estudiante:</label>
+    <input type="text" id="apellidoEstudiante" placeholder="Ingrese el apellido del estudiante" required>
+
+    <label for="sexoest">Sexo:</label>
+    <select id="sexoest" required>
+      ${cargarsexos()}
+    </select> 
+
+    <label for="nacimientoest">Fecha de Nacimiento: DIA-MES-AÑO</label>
+    <input type="text" id="nacimientoest" placeholder="Ingrese la fecha de nacimiento" required>
+
+    <label for="tipodocumentoest">Tipo de Documento:</label>
+    <select id="tipodocumentoest" required>
+      ${cargartiposdocs()}
+    </select> 
+
+    <label for="numdocumentoest">Numero de documento:</label>
+    <input type="number" id="numdocumentoest" placeholder="Ingrese el número de documento" required> 
+
+    <label for="ciudadestudiante">Ciudad de Residencia</label>
+    <input type="text" id="ciudadestudiante" placeholder="Ingrese la ciudad de residencia" required>
+
+    <label for="direccionest">Direccion:</label>
+    <input type="text" id="direccionest" placeholder="Ingrese la dirección" required>
+
+    <label for="telefonoest">Telefono:</label>
+    <input type="number" id="telefonoest" placeholder="Ingrese el número de teléfono" required>
+
+    <label for="programaest">Programa:</label>
+    <div class="search-container.prog">
+      <input type="text" id="search-input-docs" placeholder="Buscar Programas...">
+      <ul id="search-results-docs"></ul>
+    </div>
+
+    <button type="submit">Crear Estudiante</button>
+  </form>
+`;
 
   const searchInputdocs = document.getElementById('search-input-docs');
   const searchResultsdocs = document.getElementById('search-results-docs');
@@ -87,7 +97,8 @@ const cargarFormularioEstudiantes=()=>{
   });
 }
 
-const crearEstudiante= async ()=>{
+const crearEstudiante= async (event)=>{
+  event.preventDefault();
   const nombreInput=document.getElementById('nombreEstudiante');
   const apellidoInput=document.getElementById('apellidoEstudiante');
   const sexoInput=document.getElementById('sexoest');
@@ -187,49 +198,52 @@ const guardarEstudiante= async(nuevoEstudiante)=>{
   }
 }
 
+  
 const mostrarListaEst = async () => {
   await cargarEstudiantes();
 
-  const busquedaEstudiantes = document.getElementById('busqueda-Estudiantes');  
+  const busquedaEstudiantes = document.getElementById('lista-Estudiantes');
 
   busquedaEstudiantes.innerHTML = `
     <div class="search-container.est">
-      <input type="text" id="search-input" placeholder="Buscar Estudiantes...">
-      <ul id="search-results"></ul>
+      <h2>Listado De Estudiantes</h2>
+      <input type="text" class="input-gestion" id="search-input-EST" placeholder="Buscar Estudiantes...">
+      <ul class="results-lists" id="search-results-EST"></ul>
     </div>
   `;
 
-  const searchInput = document.getElementById('search-input');
-  const searchResults = document.getElementById('search-results');
+  const searchInputEST = document.getElementById('search-input-EST');
+  const searchResultsEST = document.getElementById('search-results-EST');
 
   function displayResults(results) {
-    searchResults.innerHTML = '';
+    searchResultsEST.innerHTML = '';
 
     results.forEach(result => {
       const li = document.createElement('li');
       li.textContent = `ID: ${result.id}, Nombre: ${result.nombre}, Apellido: ${result.apellido}, Documento: ${result.numero_documento}, Programa ID: ${result.programa_id}`;
-      searchResults.appendChild(li);
+      searchResultsEST.appendChild(li);
     });
 
-  if (results.length === 0) {
-    const li = document.createElement('li');
-    li.textContent = 'No se encontraron Estudiantes';
-    searchResults.appendChild(li);
-    return;
+    if (results.length === 0) {
+      const li = document.createElement('li');
+      li.textContent = 'No se encontraron Estudiantes';
+      searchResultsEST.appendChild(li);
+      return;
+    }
   }
-}
 
-  searchInput.addEventListener('input', function() {
+  searchInputEST.addEventListener('input', function () {
     const inputValue = this.value.toLowerCase();
-    const filteredItems = listaEstudiantes.filter(estudiante => 
+    const filteredEst = listaEstudiantes.filter(estudiante =>
       estudiante.numero_documento.toLowerCase().includes(inputValue)
     );
 
-    displayResults(filteredItems);
+    displayResults(filteredEst);
   });
 
   displayResults(listaEstudiantes);
 };
+
 
 
 
