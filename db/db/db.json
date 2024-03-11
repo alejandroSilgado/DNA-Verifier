@@ -1,0 +1,290 @@
+{
+  "periodos": [
+    {
+      "id": "1",
+      "codigo": "P24-01",
+      "ano": 2024,
+      "semestre": 1
+    },
+    {
+      "id": "2",
+      "codigo": "P24-02",
+      "ano": 2024,
+      "semestre": 2
+    }
+  ],
+  "programas": [
+    {
+      "id": "1",
+      "nombre": "Ingeniería de Sistemas",
+      "nivel": "Pregrado"
+    },
+    {
+      "id": "2",
+      "nombre": "Ingeniería de Mecatronica",
+      "nivel": "Pregrado"
+    },
+    {
+      "id": "3",
+      "nombre": "Ingeniería de Industrial",
+      "nivel": "Pregrado"
+    },
+    {
+      "id": "4",
+      "nombre": "Ingeniería Civil",
+      "nivel": "Pregrado"
+    },
+    {
+      "id": "5",
+      "nombre": "Ingeniería Quimica",
+      "nivel": "Pregrado"
+    },
+    {
+      "id": "6",
+      "nombre": "Ingeniería de Electronica",
+      "nivel": "Pregrado"
+    },
+    {
+      "id": "7",
+      "nombre": "Ingeniería de Mecanica",
+      "nivel": "Pregrado"
+    },
+    {
+      "id": "8",
+      "nombre": "Diseño Grafico",
+      "nivel": "Pregrado"
+    },
+    {
+      "id": "9",
+      "nombre": "Derecho",
+      "nivel": "Pregrado"
+    },
+    {
+      "id": "10",
+      "nombre": "Idiomas & Lenguas extranjeras",
+      "nivel": "Pregrado"
+    },
+    {
+      "id": "11",
+      "nombre": "Contabilidad",
+      "nivel": "Pregrado"
+    }
+  ],
+  "tarifas": [
+    {
+      "id": "1",
+      "costo_credito": 1000,
+      "periodo_id": 1,
+      "programa_id": 1
+    },
+    {
+      "id": "2",
+      "costo_credito": 1100,
+      "periodo_id": 1,
+      "programa_id": 2
+    }
+  ],
+  "departamentos": [
+    {
+      "id": "1",
+      "nombre": "Departamento de Informática"
+    },
+    {
+      "id": "2",
+      "nombre": "Departamento de Matemáticas"
+    }
+  ],
+  "profesores": [
+    {
+      "id": "1",
+      "tipo_documento": "CC",
+      "numero_documento": "13788555",
+      "nombre": "Juan",
+      "apellido": "Pérez",
+      "departamento_id": 1
+    },
+    {
+      "id": "2",
+      "tipo_documento": "CC",
+      "numero_documento": "137880000",
+      "nombre": "María",
+      "apellido": "Gómez",
+      "departamento_id": 2
+    },
+    {
+      "id": "3",
+      "tipo_documento": "Cedula de Ciudadania",
+      "numero_documento": "09236712",
+      "nombre": "Martha",
+      "apellido": "Rey",
+      "programa_id": "2"
+    }
+  ],
+  "alumnos": [
+    {
+      "id": "1",
+      "nombre": "Carlos",
+      "apellido": "Rodríguez",
+      "tipo_documento": "Cédula",
+      "numero_documento": "123456789",
+      "ciudad_residencia": "Bogotá",
+      "direccion": "Calle 123",
+      "telefono": "1234567890",
+      "fecha_nacimiento": "1990-01-01",
+      "sexo": "Masculino",
+      "programa_id": 1
+    },
+    {
+      "id": "2",
+      "nombre": "Ana",
+      "apellido": "Martínez",
+      "tipo_documento": "Cédula de Extranjería",
+      "numero_documento": "987654321",
+      "ciudad_residencia": "Medellín",
+      "direccion": "Carrera 456",
+      "telefono": "0987654321",
+      "fecha_nacimiento": "1992-05-15",
+      "sexo": "Femenino",
+      "programa_id": 2
+    },
+    {
+      "id": "3",
+      "nombre": "Santiago",
+      "apellido": "Laguado Osorio",
+      "tipo_documento": "Cedula de Ciudadania",
+      "numero_documento": "1097489826",
+      "ciudad_residencia": "Bucaramanga",
+      "direccion": "Calle 36 # 34-52",
+      "telefono": "2157645002",
+      "fecha_nacimiento": "2004-06-12",
+      "sexo": "Masculino",
+      "programa_id": "1"
+    },
+    {
+      "id": "4",
+      "nombre": "Juan",
+      "apellido": "Garcia Hernandez",
+      "tipo_documento": "Cedula de Ciudadania",
+      "numero_documento": "1097489827",
+      "ciudad_residencia": "Bucaramanga",
+      "direccion": "Calle 36 # 34-52",
+      "telefono": "3154797800",
+      "fecha_nacimiento": "2004-17-11",
+      "sexo": "Masculino",
+      "programa_id": "10"
+    },
+    {
+      "id": "5",
+      "nombre": "Clara Elibeth",
+      "apellido": "Osorio Reina",
+      "tipo_documento": "Cedula de Ciudadania",
+      "numero_documento": "37510802",
+      "ciudad_residencia": "Bucaramanga",
+      "direccion": "Calle 36 # 34-52",
+      "telefono": "3154100075",
+      "fecha_nacimiento": "1977-01-04",
+      "sexo": "Masculino",
+      "programa_id": "11"
+    },
+    {
+      "id": "6",
+      "nombre": "Alejandro",
+      "apellido": "Bravo",
+      "tipo_documento": "Cedula de Ciudadania",
+      "numero_documento": "1014198153",
+      "ciudad_residencia": "Bucaramanga",
+      "direccion": "paraguitas real",
+      "telefono": "3138539155",
+      "fecha_nacimiento": "2024-03-08",
+      "sexo": "Masculino",
+      "programa_id": "1"
+    }
+  ],
+  "cursos": [
+    {
+      "id": "1",
+      "nombre": "Programación Avanzada",
+      "codigo": "PROG-AVA",
+      "guia_catedra": "URL_Guia_Catedra.pdf"
+    },
+    {
+      "id": "2",
+      "nombre": "Álgebra Lineal",
+      "codigo": "ALG-LI",
+      "guia_catedra": "URL_Guia_Catedra.pdf"
+    }
+  ],
+  "salones": [
+    {
+      "id": "1",
+      "capacidad_alumnos": 30,
+      "edificio": "Edificio A",
+      "piso": 2,
+      "numero_identificacion": "S001"
+    }
+  ],
+  "asignaturas": [
+    {
+      "id": "1",
+      "curso_id": 1,
+      "codigo": "PROG-AVA-PER-2024",
+      "creditos": 4,
+      "profesor_id": 1,
+      "cupos_disponibles": 20,
+      "programa_id": 1,
+      "horario_clases": [
+        {
+          "dia": "Lunes",
+          "hora_inicio": "08:00",
+          "hora_fin": "10:00",
+          "salon_id": 1
+        },
+        {
+          "dia": "Martes",
+          "hora_inicio": "08:00",
+          "hora_fin": "10:00",
+          "salon_id": 1
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "curso_id": 2,
+      "codigo": "ALG-LI-PER-2024",
+      "creditos": 3,
+      "profesor_id": 2,
+      "cupos_disponibles": 15,
+      "programa_id": 2,
+      "horario_clases": [
+        {
+          "dia": "Lunes",
+          "hora_inicio": "10:00",
+          "hora_fin": "12:00",
+          "salon_id": 1
+        },
+        {
+          "dia": "Jueves",
+          "hora_inicio": "10:00",
+          "hora_fin": "12:00",
+          "salon_id": 1
+        }
+      ]
+    }
+  ],
+  "matriculas": [
+    {
+      "id": "1",
+      "estudiante_id": 1,
+      "asignatura_id": 1,
+      "periodo_id": 1,
+      "precio": 4000
+    },
+    {
+      "id": "1",
+      "estudiante_id": 1,
+      "asignatura_id": 2,
+      "periodo_id": 1,
+      "precio": 3300
+    }
+  ]
+}

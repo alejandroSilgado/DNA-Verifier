@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images/UDS_Blanco.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/background.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>The Sabios University</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo"><img src="images/UDS_Blanco.png" alt="CAMPUS UNIVERSIRY">Univerdad De Los Sabios</div>
+        
+        <input type="checkbox" id="toggle">
+        <label id="menu-btn" for="toggle"class="fas fa-bars" alt="menu"></label>
+
+        <nav class="navigation">
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Informes</a>
+                    <ul>
+                        <li><a href="#">Inf. Matriculas</a></li>
+                        <li><a href="#">Inf. Asignaturas</a></li>
+                        <li><a href="#">Generar Horarios</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Datos Existentes</a>
+                    <ul>
+                        <li><a href="#">Programas</a></li>
+                        <li><a href="#">Periodos</a></li>
+                        <li><a href="#">Tarifas</a></li>
+                        <li><a href="#">Departamentos</a></li>
+                        <li><a href="#">Salones</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Gestion</a>
+                    <ul>
+                        <li><a href="#">Estudiantes</a></li>
+                        <li><a href="#">Docentes</a></li>
+                        <li><a href="#">Asignaturas</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Matriculas</a>
+                    <ul>
+                        <li><a href="#">Nueva Matricula</a></li>
+                        <li><a href="#">Lista de Matriculas</a></li>
+                    </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="Inicio">
+            <div id="text">
+                <h1> The "SABIOS" University </h1>
+                <p>Bienvenido a la plataforma digital de la universidad de los sabios.
+                </p>
+            </div>
+            <div id="logotsu"> <img src="images/UDS_Negro.png" alt="LOGO TSU"></div>
+
+        </section>
+        <!-- INFORMES -->
+        <section id="inforMatriculas">
+            <h2>Total del matriculas</h2>
+            <div id="info-Matriculas"></div>
+        </section>
+        <section id="inforAsignatura">
+            <h2>Informe de Asignaturas mas Matriculadas</h2>
+            <div id="info-Asignatura"></div>
+        </section>
+        <section id="Horarios">
+            <h2>Generacion de Horarios</h2>
+            <div id="Horarios-form"></div>
+            <div id="Horarios"></div>
+        </section>
+        <!-- INFO EXISTENTE -->
+        <section id="Programas">
+            <h2>Listado de Programas</h2>
+            <div id="listado-Programas"></div>
+        </section>
+        <section id="Periodos">
+            <h2>Listado de Periodos</h2>
+            <div id="listado-Periodos"></div>
+        </section>
+        <section id="Tarifas">
+            <h2>Listado de Tarifas</h2>
+            <div id="listado-Tarifas"></div>
+        </section>
+        <section id="Departamentos">
+            <h2>Listado de Departamentos</h2>
+            <div id="listado-Departamentos"></div>
+        </section>
+        <section id="Salones">
+            <h2>Listado de Salones</h2>
+            <div id="listado-Salones"></div>
+        </section>
+        <!-- GESTION -->
+        <section id="Estudiantes">
+            <h2>Gestion de Estudiantes</h2>
+            <div id="Estudiantes-form"></div>
+            <div id="lista-Estudiantes">
+                <h2>Lista de Estudiantes</h2>
+                <div id="busqueda-Estudiantes"></div>
+                <div id="listado-Estudiantes"></div>
+            </div>
+        </section>
+        <section id="Docentes">
+                <h2>Gestion de Docentes</h2>
+            <div id="Docentes-form"></div>
+            <div id="lista-Docentes">
+                <h2>Lista de Docentes</h2>
+                <div id="busqueda-Docentes"></div>
+                <div id="listado-Docentes"></div>
+            </div>
+        </section>
+        <section id="Asignaturas">
+            <div id="Asignaturas-form"></div>
+            <div id="listado-Asignaturas"></div>
+        </section>
+        <!-- MATRICULAS -->
+        <section id="Nueva-Matricula">
+            <h2>Nuevas Matriculas</h2>
+            <div id="Matriculas-form"></div>
+        </section>
+        <section id="Lista-Matriculas">
+            <h2>Listado de Matriculas</h2>
+            <div id="listado-Matriculas"></div>
+        </section>
+    </main>
+    <footer>
+        &copy UDS(Universidad De Los Sabios) <br> Created By Alejandro Silgado Bravo <br> Campuslands 2024.
+    </footer>
+    <script src="https://kit.fontawesome.com/675392fb36.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="app.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/cargarListas.js"></script>
+    <script src="js/utilities.js"></script>
+    <script src="js/Asignaturas.js"></script>
+    <script src="js/Profesores.js"></script>
+    <script src="js/Alumnos.js"></script>
+    <script src="js/Departamentos.js"></script>
+    <script src="js/Informes.js"></script>
+    <script src="js/Matriculas.js"></script>
+</body>
+
+</html>

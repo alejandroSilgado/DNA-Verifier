@@ -1,0 +1,380 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+:root {
+  --color-navbar: #222222;
+  --color-hover-navbar: #414141;
+  --color-text-navbar: rgb(255, 255, 255);
+  --color-submenu-navbar: #222222;
+  --color-submenu-responsive-navbar: #282828;
+
+
+}
+
+body {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  min-height: 100vh;
+  max-width: 100%;
+  font-family: 'Poppins', sans-serif;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 110px;
+  background-color: var(--color-navbar);
+  padding: 0 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1;
+}
+
+.logo img {
+  height: 100px;
+  width: auto;
+}
+
+.navigation ul {
+  list-style: none;
+}
+
+.header .navigation ul li {
+  float: left;
+  position: relative;
+}
+
+.header .navigation ul li a {
+  font-size: 20px;
+  color: var(--color-text-navbar);
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+  transition: all 0.2s ease;
+}
+
+.header .navigation ul li a:hover {
+  border-radius: 2rem;
+  background-color: var(--color-hover-navbar);
+}
+
+.header .navigation ul li ul {
+  position: absolute;
+  right: 0;
+  width: 200px;
+  background-color: var(--color-submenu-navbar);
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 5px;
+
+  display: none;
+}
+
+.header .navigation ul li ul li a {
+  font-size: 15px;
+  text-transform: capitalize;
+}
+
+.header .navigation ul li ul li ul {
+  position: absolute;
+  top: 0;
+  right: 300px;
+}
+
+.header .navigation ul li ul li {
+  width: 100%;
+}
+
+.header .navigation ul li:hover>ul {
+  display: initial;
+}
+
+.header .navigation ul li ul li span {
+  float: right;
+  color: white;
+  background-color: rgb(2, 46, 167);
+  padding: 5px 10px;
+  font-size: 12px;
+  text-align: center;
+  border-radius: 5px;
+}
+#toggle ,
+.header label {
+  font-size: 3rem;
+  color: var(--color-text-navbar);
+  cursor: pointer;
+  display: none;
+
+}
+
+
+img {
+  width: 45px;
+  height: 35px;
+}
+
+@media (max-width: 950px) {
+  .header label {
+    display: initial;
+  }
+
+  .header {
+    padding: 20px 10%;
+  }
+
+  .header .navigation {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--color-navbar);
+    display: none;
+  }
+
+  .header .navigation ul li {
+    width: 100%;
+  }
+
+  .header .navigation ul li a {
+    padding: 8px 30px 8px 10%;
+  }
+
+  .header .navigation ul li ul {
+    position: relative;
+    width: 100%;
+    left: 0;
+  }
+
+  .header .navigation ul li ul li {
+    background-color: var(--color-submenu-responsive-navbar);
+  }
+
+  .header .navigation ul li ul li ul {
+    position: relative;
+    width: 100%;
+    left: 0;
+  }
+
+
+  .header .navigation ul li ul li span {
+    padding: 4px 10px;
+    font-size: 10px;
+  } 
+
+  #toggle:checked ~ .navigation {
+    display: block;
+  }
+  #toggle.fa-times{
+    transform:rotate(180deg);
+  }
+}
+
+main {
+  color: black;
+  width: 100vw;
+  max-width: 100%;
+}
+
+section {
+  margin-top: 110px;
+  width: 91vw;
+  height: fit-content;
+  min-height: 154vh;
+  margin: 50px;
+  margin-top: 100px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+button {
+  padding: 0.5em;
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--color-hover-navbar);
+}
+
+ul {
+  border-radius: 1rem;
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  cursor: pointer;
+}
+
+.item-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+#inforMatriculas {
+  background-color: aqua;
+}
+
+#Inicio {
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+
+#text {
+  text-align: center;
+  padding-left: 9vw;
+}
+
+#logotsu {
+  width: 1000px;
+  text-align: end;
+}
+
+#logotsu img {
+  width: auto;
+  height: 800px;
+}
+
+#Estudiantes {
+  flex-wrap: wrap;
+  position: relative;
+}
+
+#Estudiantes h2 {
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+}
+
+#Estudiantes-form {
+  padding-left: 15em;
+  padding-right: 10em;
+  width: 50%;
+}
+
+#lista-Estudiantes {
+  width: 50%;
+  height: fit-content;
+  padding-left: 5em;
+  padding-right: 10em;
+}
+
+#search-input {
+  width: 80%;
+  text-align: center;
+  margin-left: 10%;
+}
+
+#search-input-docs {
+  width: 100%;
+}
+
+#search-results-docs {
+  padding-top: 10px;
+}
+
+footer {
+  font-size: 15px;
+  height: 80px;
+  text-align: center;
+  background-color: #f1eded;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+  padding-top: 0.5em;
+}
+
+#Docentes {
+  flex-wrap: wrap;
+  position: relative;
+}
+
+h2 {
+  width: 100%;
+  text-align: center;
+}
+
+#Docentes-form {
+  padding-left: 15em;
+  padding-right: 10em;
+  width: 50%;
+}
+
+#listado-Docentes {
+  width: 50%;
+  height: fit-content;
+  padding-left: 5em;
+  padding-right: 10em;
+}
+
+/* ASIGNATURAS STYLES DE CAJAS */
+#Asignaturas-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120vh;
+  background: rgba( 126, 211, 33, 0.3 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 2px );
+  border-radius: 44px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  width: 53%;
+  margin: auto;
+  padding: 10px ;
+}
+
+form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 36px;
+}
+
+form select {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 36px;
+}
+form button {
+  border-radius: 36px;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-container form {
+  width: 80%; 
+  margin: auto;
+}
+
+#listado-Asignaturas {
+  display: flex;
+  height: 120vh;
+  background: rgba( 126, 211, 33, 0.3 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 2px );
+  border-radius: 44px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  width: 47%;
+  margin: auto;
+  margin-left: 50px;
+  padding: 30px;
+}
+input#search-input-Asignaturas{
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 36px;
+}
