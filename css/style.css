@@ -1,22 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 
 :root {
-  --color-navbar: #222222;
-  --color-hover-navbar: #414141;
-  --color-text-navbar: rgb(255, 255, 255);
-  --color-submenu-navbar: #222222;
-  --color-submenu-responsive-navbar: #282828;
+  --color-navbar: #6beeff;
+  --color-hover-navbar: #22e1fa;
+  --color-text-navbar: #222222;
+  --color-submenu-navbar: #6beeff;
+  --color-submenu-responsive-navbar: #6beeff;
 
-  --color-boxes-form:rgba( 126, 211, 33, 0.3 );
-
+  --color-boxes-form: rgba(126, 211, 33, 0.3);
+  --color-box-verificacion: white;
 }
 
+html,
 body {
   box-sizing: border-box;
   font-family: sans-serif;
-  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  height: 100%;
   max-width: 100%;
   font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+  font-size: 3rem;
+  text-shadow: 0 0 30px var(--color-hover-navbar);
 }
 
 .header {
@@ -34,8 +42,14 @@ body {
 }
 
 .logo img {
-  height: 100px;
+  height: 40px;
   width: auto;
+}
+
+.logo {
+  color: var(--color-text-navbar);
+  font-size: 3rem;
+  font-weight: bold;
 }
 
 .navigation ul {
@@ -101,7 +115,8 @@ body {
   text-align: center;
   border-radius: 5px;
 }
-#toggle ,
+
+#toggle,
 .header label {
   font-size: 3rem;
   color: var(--color-text-navbar);
@@ -116,7 +131,317 @@ img {
   height: 35px;
 }
 
-@media (max-width: 950px) {
+main {
+  color: black;
+  width: 100vw;
+  max-width: 100%;
+}
+
+section {
+  margin-top: 110px;
+  width: 91vw;
+  height: fit-content;
+  min-height: 140vh;
+  margin: 50px;
+  margin-top: 100px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  margin-left: 30px;
+}
+
+button {
+  font-weight: bold;
+  padding: 0.5em;
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+button:hover {
+  background-color: var(--color-hover-navbar);
+  color: #222222;
+}
+
+ul {
+  border-radius: 1rem;
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  cursor: pointer;
+}
+
+.item-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+
+
+#Inicio {
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+
+#text {
+  text-align: center;
+  padding-left: 9vw;
+}
+
+#logoinicio {
+  width: 1000px;
+  text-align: end;
+}
+
+#logoinicio img {
+  width: auto;
+  height: 500PX;
+}
+
+footer {
+  font-size: 15px;
+  height: 80px;
+  text-align: center;
+  background-color: #f1eded;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+  padding-top: 0.5em;
+  margin-top: 10px;
+}
+
+h2 {
+  width: 100%;
+  text-align: center;
+}
+/* ESTILOS DEL INICIO */
+
+#inicio-container {
+  display: flex;
+  align-items: center;
+}
+
+#logo-negro {
+  width: 44vw;
+  height: 31vw;
+  margin-top: 90px;
+  margin-right: 20px;
+}
+
+#bienvenidos-texto {
+  max-width: 600px;
+}
+
+#bienvenidos-texto h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+#bienvenidos-texto p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+/* ESTILOS DE LA QUIENES SOMOS */
+
+#quienes-somos-container {
+  text-align: left;
+}
+
+#quienes-somos-titulo {
+  font-size: 4em;
+  margin-bottom: 10px;
+  text-align: center;
+  margin-top: 150px;
+  margin-bottom: 30px;
+}
+
+#quienes-somos-texto {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+#quienes-somos-img {
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+}
+
+/* ESTILOS DE LA MISION */
+#mision-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+#mision-texto-container {
+  flex: 1;
+}
+
+#mision-titulo {
+  margin-bottom: 10px;
+  padding-bottom: 60px;
+}
+
+#mision-texto {
+  font-size: 1.2em;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+#mision-container img {
+  width: 40%;
+  height: 10%;
+}
+/* ESTILOS DE LA VISION */
+#vision-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+#vision-texto-container {
+  flex: 1;
+}
+
+#vision-titulo {
+  padding-bottom: 60px;
+  margin-bottom: 10px;
+}
+
+#vision-texto {
+  font-size: 1.2em;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+#vision-container img {
+  width: 40%;
+  height: 10%;
+}
+
+/* ESTILOS DE LOS BOTONES DE INPUT Y LABEL DE FORMULARIOS */
+form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 36px;
+}
+
+form select {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 36px;
+}
+
+form button {
+  border-radius: 36px;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-container form {
+  width: 80%;
+  margin: auto;
+}
+
+/* AGREGAR CUIDADANOS ESTILOS */
+
+#Cuidadanos-form {
+  float: left;
+  order: 1;
+  background: rgba(107, 238, 255, 0.45);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  margin: auto;
+  padding: 30px;
+  width: 40%;
+
+}
+
+#lista-Cuidadanos {
+  float: right;
+  order: 2;
+  background: rgba(107, 238, 255, 0.45);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  margin: auto;
+  padding: 30px;
+  width: 40%;
+}
+
+/*  ESTILOS */
+
+/*  ESTILOS */
+div#verificacion-form {
+  background: rgba(107, 238, 255, 0.45);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  margin: auto;
+  padding: 30px;
+  width: 40%;
+}
+
+#search-input-CIUD,
+#codigoADNUsuario {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 36px;
+}
+
+div#similitud-ADN {
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 20px;
+  background-color: var(--color-box-verificacion);
+}
+
+/* Media query solo para Estudiantes */
+
+@media screen and (max-width: 1024px) {
+
+  #Estudiantes-form,
+  #lista-Estudiantes {
+    height: 185vh;
+    margin-right: 40px;
+    margin-bottom: 50px;
+    width: 100%;
+  }
+}
+
+/* Media query solo para Asignaturas */
+@media screen and (max-width: 1024px) {
+
+  #Asignaturas-form,
+  #listado-Asignaturas {
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+    margin: 20px auto;
+  }
+}
+@media screen and (max-width: 1024px) {
   .header label {
     display: initial;
   }
@@ -169,322 +494,5 @@ img {
   }
   #toggle.fa-times{
     transform:rotate(180deg);
-  }
-}
-
-main {
-  color: black;
-  width: 100vw;
-  max-width: 100%;
-}
-
-section {
-  margin-top: 110px;
-  width: 91vw;
-  height: fit-content;
-  min-height: 140vh;
-  margin: 50px;
-  margin-top: 100px;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5em;
-}
-
-button {
-  padding: 0.5em;
-  background-color: #333;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: var(--color-hover-navbar);
-}
-
-ul {
-  border-radius: 1rem;
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  cursor: pointer;
-}
-
-.item-list {
-  list-style-type: none;
-  padding: 0;
-}
-
-#inforMatriculas {
-  background-color: aqua;
-}
-
-#Inicio {
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100vh;
-}
-
-#text {
-  text-align: center;
-  padding-left: 9vw;
-}
-
-#logotsu {
-  width: 1000px;
-  text-align: end;
-}
-
-#logotsu img {
-  width: auto;
-  height: 800px;
-}
-
-#Estudiantes {
-  flex-wrap: wrap;
-  position: relative;
-}
-
-#Estudiantes h2 {
-  width: 100%;
-  text-align: center;
-  padding: 10px;
-}
-
-#Estudiantes-form {
-  padding-left: 15em;
-  padding-right: 10em;
-  width: 50%;
-}
-
-#lista-Estudiantes {
-  width: 50%;
-  height: fit-content;
-  padding-left: 5em;
-  padding-right: 10em;
-}
-
-#search-input {
-  width: 80%;
-  text-align: center;
-  margin-left: 10%;
-}
-
-#search-input-docs {
-  width: 100%;
-}
-
-#search-results-docs {
-  padding-top: 10px;
-}
-
-footer {
-  font-size: 15px;
-  height: 80px;
-  text-align: center;
-  background-color: #f1eded;
-  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
-  padding-top: 0.5em;
-}
-
-#Docentes {
-  flex-wrap: wrap;
-  position: relative;
-}
-
-h2 {
-  width: 100%;
-  text-align: center;
-}
-
-#Docentes-form {
-  padding-left: 15em;
-  padding-right: 10em;
-  width: 50%;
-}
-
-#listado-Docentes {
-  width: 50%;
-  height: fit-content;
-  padding-left: 5em;
-  padding-right: 10em;
-}
-/* ESTILOS DE LOS BOTONES DE INPUT Y LABEL DE FORMULARIOS */
-form input {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 36px;
-}
-
-form select {
-  padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 36px;
-}
-form button {
-  border-radius: 36px;
-}
-
-.form-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.form-container form {
-  width: 80%; 
-  margin: auto;
-}
-/* ESTUDIANTES ESTILOS DE CAJAS  */
-
-#Estudiantes-form{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 160vh;
-  background: var(--color-boxes-form);
-  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-  backdrop-filter: blur( 2px );
-  border-radius: 44px;
-  border: 1px solid rgba( 255, 255, 255, 0.18 );
-  width: 47%;
-  margin: auto;
-  padding: 30px;
-
-}
-#lista-Estudiantes{
-  display: flex;
-  justify-content: center;
-  height: 160vh;
-  background: var(--color-boxes-form);
-  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-  backdrop-filter: blur( 2px );
-  border-radius: 44px;
-  border: 1px solid rgba( 255, 255, 255, 0.18 );
-  width: 47%;
-  margin: auto;
-  padding: 30px;
-}
-input#search-input-EST{
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 36px;
-} 
-a#boton-crear-docente {
-  padding: 0.5em;
-  background-color: var(--color-navbar);
-  color: var(--color-text-navbar);
-  border: none;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: var(--color-hover-navbar);
-}
-section#Estudiantes {
-  min-height: 182vh;
-}
-/* DOCENTES ESTILOS DE CAJAS  */
-#Docentes-form{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 90vh;
-  background: var(--color-boxes-form);
-  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-  backdrop-filter: blur( 2px );
-  border-radius: 44px;
-  border: 1px solid rgba( 255, 255, 255, 0.18 );
-  width: 40%;
-  margin: auto;
-  padding: 10px;
-}
-#lista-Docentes{
-  display: flex;
-  justify-content: center;
-  height: 90vh;
-  background: var(--color-boxes-form);
-  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-  backdrop-filter: blur( 2px );
-  border-radius: 44px;
-  border: 1px solid rgba( 255, 255, 255, 0.18 );
-  width: 40%;
-  margin: auto;
-  margin-left: 50px;
-  padding: 30px;
-}
-section#Docentes {
-  min-height: 107vh;
-}
-input#search-input-docnts {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 36px;
-}
-/* ASIGNATURAS STYLES DE CAJAS */
-#Asignaturas-form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 120vh;
-  background: var(--color-boxes-form);
-  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-  backdrop-filter: blur( 2px );
-  border-radius: 44px;
-  border: 1px solid rgba( 255, 255, 255, 0.18 );
-  width: 53%;
-  margin: auto;
-  padding: 10px ;
-}
-
-#listado-Asignaturas {
-  display: flex;
-  height: 120vh;
-  background: var(--color-boxes-form);
-  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-  backdrop-filter: blur( 2px );
-  border-radius: 44px;
-  border: 1px solid rgba( 255, 255, 255, 0.18 );
-  width: 47%;
-  margin: auto;
-  margin-left: 50px;
-  padding: 30px;
-}
-input#search-input-Asignaturas{
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 36px;
-}
-
-/* Media query solo para Estudiantes */
-
-@media screen and (max-width: 768px) {
-  #Estudiantes-form,
-  #lista-Estudiantes {
-    height: 185vh;
-    margin-right: 40px ;
-    margin-bottom: 50px;
-    width: 100%; 
-  }
-}
-/* Media query solo para Asignaturas */
-@media screen and (max-width: 768px) {
-  #Asignaturas-form,
-  #listado-Asignaturas {
-    flex-direction: column;
-    height: auto;
-    width: 100%;
-    margin: 20px auto;
   }
 }

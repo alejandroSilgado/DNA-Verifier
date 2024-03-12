@@ -1,16 +1,10 @@
 document.addEventListener('DOMContentLoaded', async () => {
     await handleNavigation();
-    await cargarListasExistentes();
-    //CARGAR DE ARCHIVOS DE ESTUDIANTES:
-    await mostrarListaEst();
-    cargarFormularioEstudiantes();
-    //CARGA DE FUNCIONES DE ASGINATURAS 
-    await mostrarListaAsignaturas();
-    cargarFormularioAsignaturas();
-    //CARGA DE FUNCIONES DE DOCENTES 
-    await mostrarListaDocts();
-    cargarFormularioDocentes();
-
+    //CREAR CUIDADANOS
+    await mostrarListaCiudadanos();
+    cargarFormularioCiudadanos();
+    //VERIFICAR CUIDADANOS
+    cargarFormularioADN();
 
     const links = document.querySelectorAll('.navigation a');
     links.forEach(link => {
@@ -34,33 +28,22 @@ const navigateToSection = (sectionId) => {
 
     const sectionToShow = document.getElementById(sectionId);
     if (sectionToShow) {
-        sectionToShow.style.display = 'flex';
+        sectionToShow.style.display = 'block';
     }
 }
 
 const sectionMap = {
     'Inicio': 'Inicio',
-    // Informes
-    'Informes': 'inforMatriculas',
-    'Inf. Matriculas': 'inforMatriculas',
-    'Inf. Asignaturas': 'inforAsignatura',
-    'Generar Horarios': 'Horarios',
-    // Datos Existentes
-    'Datos Existentes': 'Programas',
-    'Programas': 'Programas',
-    'Periodos': 'Periodos',
-    'Tarifas': 'Tarifas',
-    'Departamentos': 'Departamentos',
-    'Salones': 'Salones',
-    // Gestion
-    'Gestion': 'Estudiantes',
-    'Estudiantes': 'Estudiantes',
-    'Docentes': 'Docentes',
-    'Asignaturas': 'Asignaturas',
-    // Matriculas
-    'Matriculas' : 'Nueva-Matricula',
-    'Nueva Matricula': 'Nueva-Matricula',
-    'Lista de Matriculas': 'Lista-Matriculas'
+    // QUIENES SOMOS
+    'Quienes Somos': 'infoNosotros',
+    'Nosotros': 'infoNosotros',
+    'Mision': 'infoMision',
+    'Vision': 'infoVision',
+    // Cuidadano y Analisis 
+    'Sistemas Cuidadanos': 'agregarADN',
+    'Agregar ADN': 'agregarADN',
+    'Verificar ADN': 'verificarADN',
+
 };
 
 
